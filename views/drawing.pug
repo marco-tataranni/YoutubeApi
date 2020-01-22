@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Ti consiglio :
+  each r in results
+    .container-video
+         .thumbnail
+            img(src=`${r.thumbnails.medium.url}`)
+    h2 #{r.title}
+    a(href=`https://www.youtube.com/watch?v=${r.id}` target='_blank') click to see the video
+    
